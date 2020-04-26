@@ -1,2 +1,0 @@
-2020-04-26 16:37:38,495 - GetExceltolist - ERROR - [Errno 2] No such file or directory: '/Users/mac/Documents/work/GP\\data_excel\\/接口测试用例_  (1).xlsx'
-2020-04-26 16:37:38,495 - GetExceltolist - ERROR - /Users/mac/Documents/work/GP\data_excel\/接口测试用例_  (1).xlsx用例Excel文件可能存在异常,或者Excel未关闭！！！

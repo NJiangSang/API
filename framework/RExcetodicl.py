@@ -23,7 +23,7 @@ class RExcetodicl():
                 "path_ex":path_ex,
                 "row":a.value,
             }
-            if data["case_class"]=="K":
+            if data["case_class"]=="K": #对应测试用例文件K项就是必须执行用例
                 datas.append(data)
 
         try:

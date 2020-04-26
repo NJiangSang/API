@@ -1,3 +1,0 @@
-2020-04-26 16:36:22,334 - GetExceltolist - ERROR - [Errno 2] No such file or directory: '/Users/mac/Documents/work/GP\\data_excel\\'
-2020-04-26 16:36:51,087 - GetExceltolist - ERROR - openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
-2020-04-26 16:36:51,087 - GetExceltolist - ERROR - /Users/mac/Documents/work/GP\data_excel\/.DS_Store用例Excel文件可能存在异常,或者Excel未关闭！！！

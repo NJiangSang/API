@@ -2,32 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="314d969f-c1e9-4024-8188-8006001b0880" name="Default" comment="updata">
-      <change afterPath="$PROJECT_DIR$/logs/202004261632.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/202004261633.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/202004261635.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/202004261636.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/202004261637.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/202004261638.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/202004261640.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/202004261643.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_report/2020-04-26-16_38_20HTMLtemplate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_report/2020-04-26-16_40_33HTMLtemplate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_report/2020-04-26-16_43_54HTMLtemplate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestRunner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (1).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data_excel/接口测试用例_  (1).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (10).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (2).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (3).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (4).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (5).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (6).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (7).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (8).xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (9).xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/PathExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/PathExcel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_report/2019-10-08-17_44_55HTMLtemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/RExcetodicl.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/RExcetodicl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261632.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261633.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261635.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261636.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261637.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261638.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261640.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261643.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/202004261645.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_report/2020-04-26-16_45_03HTMLtemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/test_report/2020-04-26-16_47_33HTMLtemplate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/HTMLTestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/HTMLTestRunner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -372,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570524914420</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updata">
+      <created>1587890765218</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587890765218</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -429,22 +425,34 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="468" y="295" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890410785" />
-    <state width="1419" height="278" key="GridCell.Tab.0.bottom" timestamp="1587890633384">
+    <state x="307" y="23" key="CommitChangelistDialog2" timestamp="1587890764996">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="278" key="GridCell.Tab.0.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890633384" />
-    <state width="1419" height="278" key="GridCell.Tab.0.center" timestamp="1587890633383">
+    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890764996" />
+    <state width="1419" height="278" key="GridCell.Tab.0.bottom" timestamp="1587890851977">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="278" key="GridCell.Tab.0.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890633383" />
-    <state width="1419" height="278" key="GridCell.Tab.0.left" timestamp="1587890633382">
+    <state width="1419" height="278" key="GridCell.Tab.0.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890851977" />
+    <state width="1419" height="278" key="GridCell.Tab.0.center" timestamp="1587890851976">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="278" key="GridCell.Tab.0.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890633382" />
-    <state width="1419" height="278" key="GridCell.Tab.0.right" timestamp="1587890633383">
+    <state width="1419" height="278" key="GridCell.Tab.0.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890851976" />
+    <state width="1419" height="278" key="GridCell.Tab.0.left" timestamp="1587890851976">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="278" key="GridCell.Tab.0.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890633383" />
+    <state width="1419" height="278" key="GridCell.Tab.0.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890851976" />
+    <state width="1419" height="278" key="GridCell.Tab.0.right" timestamp="1587890851977">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state width="1419" height="278" key="GridCell.Tab.0.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890851977" />
+    <state x="320" y="173" key="Vcs.Push.Dialog.v2" timestamp="1587890769108">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="320" y="173" key="Vcs.Push.Dialog.v2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890769108" />
+    <state x="385" y="168" width="670" height="676" key="search.everywhere.popup" timestamp="1587892121750">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="385" y="168" width="670" height="676" key="search.everywhere.popup/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892121750" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
