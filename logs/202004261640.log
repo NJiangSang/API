@@ -1,0 +1,2 @@
+2020-04-26 16:40:33,308 - GetExceltolist - ERROR - openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+2020-04-26 16:40:33,308 - GetExceltolist - ERROR - /Users/mac/Documents/work/GP/data_excel/.DS_Store用例Excel文件可能存在异常,或者Excel未关闭！！！

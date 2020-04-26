@@ -13,7 +13,7 @@ if __name__ =='__main__':
     # 初始化一个HTMLTestRunner实例对象，用来生成报告
     # 设置报告文件保存路径
     #report_path = os.path.dirname(os.path.abspath('.')) + '/test_report/'
-    report_path = os.path.join(os.getcwd() + '\\test_report\\')
+    report_path = os.path.join(os.getcwd() + '/test_report/')
 
     # 获取系统当前时间
     now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
