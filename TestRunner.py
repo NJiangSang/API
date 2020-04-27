@@ -5,6 +5,7 @@ test_yao将所有表格中的数据读取到字典中，添加至每条用例执
 import os
 import unittest
 import time
+
 from tools.HTMLTestRunner import HTMLTestRunner
 
 if __name__ =='__main__':
@@ -13,7 +14,6 @@ if __name__ =='__main__':
     # 设置报告文件保存路径
     #report_path = os.path.dirname(os.path.abspath('.')) + '/test_report/'
     report_path = os.path.join(os.getcwd() + '/test_report/')
-
     # 获取系统当前时间
     now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
     # 设置报告名称格式
@@ -22,7 +22,6 @@ if __name__ =='__main__':
     fp = open(HtmlFile, "wb")
     # 构建suite
     runner = HTMLTestRunner(stream=fp, title=u"自动化测试报告", description=u"用例测试情况")  #from tools.HTMLTestRunner import HTMLTestRunner
-    #runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"自动化测试报告", description=u"用例测试情况") #import HTMLTestRunner
     # 开始执行测试套件
     runner.run(suite)
     fp.close()

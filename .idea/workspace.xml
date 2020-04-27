@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="314d969f-c1e9-4024-8188-8006001b0880" name="Default" comment="调试header">
+      <change afterPath="$PROJECT_DIR$/data_excel/~$接口测试用例_01.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_excel/接口测试用例_01.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestRunner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_02.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +150,7 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration name="RWExcel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="RExcetodicl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="automation_test_framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,12 +158,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../test" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/framework" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test/RWExcel.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/framework/RExcetodicl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RWExcel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="automation_test_framework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/framework" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/framework/RWExcel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RequestAPI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="automation_test_framework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/framework" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/framework/RequestAPI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,50 +235,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="automation_test_framework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../test" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test/run.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sdgsd" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="automation_test_framework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../test" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test/sdgsd.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for test_case.test_yao.Test.test_1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="automation_test_framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -250,19 +251,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.RWExcel" />
       <item itemvalue="Python.TestRunner" />
-      <item itemvalue="Python.run" />
-      <item itemvalue="Python.sdgsd" />
       <item itemvalue="Python tests.Unittests for test_case.test_yao.Test.test_1" />
+      <item itemvalue="Python.RExcetodicl" />
+      <item itemvalue="Python.RequestAPI" />
+      <item itemvalue="Python.RWExcel" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.TestRunner" />
-        <item itemvalue="Python tests.Unittests for test_case.test_yao.Test.test_1" />
-        <item itemvalue="Python.run" />
         <item itemvalue="Python.RWExcel" />
-        <item itemvalue="Python.sdgsd" />
+        <item itemvalue="Python.RequestAPI" />
+        <item itemvalue="Python.RExcetodicl" />
+        <item itemvalue="Python tests.Unittests for test_case.test_yao.Test.test_1" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587950029478</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="调试header">
+      <created>1587950075965</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1587950075965</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -462,50 +470,54 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="468" y="295" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890410785" />
-    <state x="307" y="23" key="CommitChangelistDialog2" timestamp="1587950029367">
+    <state x="307" y="23" key="CommitChangelistDialog2" timestamp="1587950075852">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587950029367" />
-    <state width="1419" height="212" key="GridCell.Tab.0.bottom" timestamp="1587949875894">
+    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587950075852" />
+    <state width="1419" height="263" key="GridCell.Tab.0.bottom" timestamp="1587988703456">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="212" key="GridCell.Tab.0.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949875894" />
-    <state width="1419" height="212" key="GridCell.Tab.0.center" timestamp="1587949875892">
+    <state width="1419" height="263" key="GridCell.Tab.0.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587988703456" />
+    <state width="1419" height="263" key="GridCell.Tab.0.center" timestamp="1587988703455">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="212" key="GridCell.Tab.0.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949875892" />
-    <state width="1419" height="212" key="GridCell.Tab.0.left" timestamp="1587949875892">
+    <state width="1419" height="263" key="GridCell.Tab.0.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587988703455" />
+    <state width="1419" height="263" key="GridCell.Tab.0.left" timestamp="1587988703454">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="212" key="GridCell.Tab.0.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949875892" />
-    <state width="1419" height="212" key="GridCell.Tab.0.right" timestamp="1587949875893">
+    <state width="1419" height="263" key="GridCell.Tab.0.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587988703454" />
+    <state width="1419" height="263" key="GridCell.Tab.0.right" timestamp="1587988703455">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="212" key="GridCell.Tab.0.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949875893" />
-    <state width="1419" height="263" key="GridCell.Tab.1.bottom" timestamp="1587892372039">
+    <state width="1419" height="263" key="GridCell.Tab.0.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587988703455" />
+    <state width="1419" height="263" key="GridCell.Tab.1.bottom" timestamp="1587988703457">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="263" key="GridCell.Tab.1.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372039" />
-    <state width="1419" height="263" key="GridCell.Tab.1.center" timestamp="1587892372039">
+    <state width="1419" height="263" key="GridCell.Tab.1.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587988703457" />
+    <state width="1419" height="263" key="GridCell.Tab.1.center" timestamp="1587988703456">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="263" key="GridCell.Tab.1.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372039" />
-    <state width="1419" height="263" key="GridCell.Tab.1.left" timestamp="1587892372038">
+    <state width="1419" height="263" key="GridCell.Tab.1.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587988703456" />
+    <state width="1419" height="263" key="GridCell.Tab.1.left" timestamp="1587988703456">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="263" key="GridCell.Tab.1.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372038" />
-    <state width="1419" height="263" key="GridCell.Tab.1.right" timestamp="1587892372039">
+    <state width="1419" height="263" key="GridCell.Tab.1.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587988703456" />
+    <state width="1419" height="263" key="GridCell.Tab.1.right" timestamp="1587988703456">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="263" key="GridCell.Tab.1.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372039" />
+    <state width="1419" height="263" key="GridCell.Tab.1.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587988703456" />
     <state x="320" y="173" key="Vcs.Push.Dialog.v2" timestamp="1587950031561">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="320" y="173" key="Vcs.Push.Dialog.v2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587950031561" />
-    <state x="385" y="168" width="670" height="676" key="search.everywhere.popup" timestamp="1587892121750">
+    <state x="278" y="176" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1587986806844">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="385" y="168" width="670" height="676" key="search.everywhere.popup/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892121750" />
+    <state x="278" y="176" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587986806844" />
+    <state x="385" y="168" width="670" height="676" key="search.everywhere.popup" timestamp="1587986774753">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="385" y="168" width="670" height="676" key="search.everywhere.popup/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587986774753" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
