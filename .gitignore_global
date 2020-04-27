@@ -1,0 +1,5 @@
+*.html       # 忽略所有 .html 结尾的文件
+*.log
+.DS_Store
+.gitignore_global
+!xnj.log    # 但 lib.a 除外
