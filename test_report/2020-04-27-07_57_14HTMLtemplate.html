@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+
+/*level 调整增加只显示通过用例的分类 --xnj
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+
+    //加入【详细】切换文字变化 --xnj
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -xnj
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --xnj
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">自动化测试报告</h1>
+<p class='attribute'><strong>测试人员 : </strong> nanjiang.xie</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-04-27 07:57:14</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:12.018957</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 18，通过 18，通过率= 100.00%</p>
+
+<p class='description'>用例测试情况</p>
+</div>
+
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 18 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 18 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_yao.Test</td>
+    <td class="text-center">18</td>
+    <td class="text-center">18</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',18)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in">
+    <pre>
+    
+pt1_1: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：10.140333
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '1', 'condition': 'F00', 'com': 'zhongtong', 'status': '200', 'state': '3', 'data': [{'time': '2020-04-26 17:41:09', 'ftime': '2020-04-26 17:41:09', 'context': '已签收,签收人是（乡镇代理点代签）先生/女士，如有疑问请联系派件员宝盖镇快递驿站(18570931946,0734-8011188)，如您未收到此快递，请拨打投诉电话：0731-89520936，感谢使用申通快递，期待再次为您服务', 'location': ''}, {'time': '2020-04-26 14:26:33', 'ftime': '2020-04-26 14:26:33', 'context': '湖南衡南公司-宝盖镇快递驿站(18570931946,0734-8011188)-派件中', 'location': ''}, {'time': '2020-04-26 09:46:34', 'ftime': '2020-04-26 09:46:34', 'context': '已到达-湖南衡南公司', 'location': ''}, {'time': '2020-04-25 13:53:02', 'ftime': '2020-04-25 13:53:02', 'context': '湖南衡阳转运中心-已发往-湖南衡南公司', 'location': ''}, {'time': '2020-04-25 13:45:29', 'ftime': '2020-04-25 13:45:29', 'context': '快件已在【湖南衡阳转运中心】进行卸车，扫描员【陈启平】', 'location': ''}, {'time': '2020-04-25 13:45:29', 'ftime': '2020-04-25 13:45:29', 'context': '已到达-湖南衡阳转运中心', 'location': ''}, {'time': '2020-04-24 21:57:18', 'ftime': '2020-04-24 21:57:18', 'context': '广东广州转运中心-已发往-湖南衡阳转运中心', 'location': ''}, {'time': '2020-04-24 21:57:18', 'ftime': '2020-04-24 21:57:18', 'context': '广东广州转运中心-已进行装车扫描', 'location': ''}, {'time': '2020-04-24 21:55:29', 'ftime': '2020-04-24 21:55:29', 'context': '已到达-广东广州转运中心', 'location': ''}, {'time': '2020-04-24 16:03:16', 'ftime': '2020-04-24 16:03:16', 'context': '广东广州永泰公司-赵孟元(13318853060)-已收件', 'location': ''}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in">
+    <pre>
+    
+pt1_2: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.164229
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in">
+    <pre>
+    
+pt1_3: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：0.087361
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '0', 'condition': '00', 'com': 'zhongtong', 'status': '200', 'state': '0', 'data': [{'time': '2019-10-20 08:47:05', 'ftime': '2019-10-20 08:47:05', 'context': '您的商品已从【苏宁玉林分拨中心】发出，下一站【北流】', 'location': ''}, {'time': '2019-10-20 08:45:44', 'ftime': '2019-10-20 08:45:44', 'context': '您的商品已在【苏宁玉林分拨中心】完成装车扫描', 'location': ''}, {'time': '2019-10-20 08:03:31', 'ftime': '2019-10-20 08:03:31', 'context': '您的商品已到达【苏宁玉林分拨中心】', 'location': ''}, {'time': '2019-10-19 11:34:34', 'ftime': '2019-10-19 11:34:34', 'context': '您的商品已从【苏宁南宁小件分拨中心】发出，下一站【苏宁玉林分拨中心】', 'location': ''}, {'time': '2019-10-19 10:56:21', 'ftime': '2019-10-19 10:56:21', 'context': '仓库作业即将完成', 'location': ''}, {'time': '2019-10-19 10:45:20', 'ftime': '2019-10-19 10:45:20', 'context': '您的商品已完成拣货', 'location': ''}, {'time': '2019-10-19 09:37:15', 'ftime': '2019-10-19 09:37:15', 'context': '已分配给出货仓库，南宁小件中心仓作业准备中', 'location': ''}, {'time': '2019-10-19 06:28:21', 'ftime': '2019-10-19 06:28:21', 'context': '您的商品已在【苏宁南宁小件分拨中心】完成装车扫描', 'location': ''}, {'time': '2019-10-19 06:28:16', 'ftime': '2019-10-19 06:28:16', 'context': '您的商品已揽收', 'location': ''}, {'time': '2019-10-19 04:31:12', 'ftime': '2019-10-19 04:31:12', 'context': '您的商品已到达【苏宁南宁小件分拨中心】', 'location': ''}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in">
+    <pre>
+    
+pt1_4: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.013781
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse in">
+    <pre>
+    
+pt1_5: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：0.075301
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '1', 'com': 'zhongtong', 'status': '200', 'condition': 'F00', 'state': '3', 'data': [{'time': '2020-04-19 07:57:23', 'context': '查无结果', 'ftime': '2020-04-19 07:57:23'}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse in">
+    <pre>
+    
+pt1_6: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.019602
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse in">
+    <pre>
+    
+pt1_7: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：0.080353
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '0', 'condition': '00', 'com': 'zhongtong', 'status': '200', 'state': '0', 'data': [{'time': '2020-04-25 22:31:28', 'ftime': '2020-04-25 22:31:28', 'context': '快件由【广东广州分拨】发往【南京江宁分拨】', 'location': ''}, {'time': '2020-04-25 21:28:47', 'ftime': '2020-04-25 21:28:47', 'context': '快件到达【广东广州分拨】', 'location': ''}, {'time': '2020-04-25 00:58:18', 'ftime': '2020-04-25 00:58:18', 'context': '快件由【广东阳江分拨】发往【广东广州分拨】', 'location': ''}, {'time': '2020-04-24 22:09:46', 'ftime': '2020-04-24 22:09:46', 'context': '快件到达【广东阳江分拨】', 'location': ''}, {'time': '2020-04-24 17:41:37', 'ftime': '2020-04-24 17:41:37', 'context': '快件由【广东遂溪分公司】发往【广东阳江分拨】', 'location': ''}, {'time': '2020-04-23 11:42:34', 'ftime': '2020-04-23 11:42:34', 'context': '快件到达【广东遂溪分公司】', 'location': ''}, {'time': '2020-04-23 05:15:28', 'ftime': '2020-04-23 05:15:28', 'context': '快件由【广东阳江分拨】发往【广东遂溪分公司】', 'location': ''}, {'time': '2020-04-22 21:34:24', 'ftime': '2020-04-22 21:34:24', 'context': '快件到达【广东阳江分拨】', 'location': ''}, {'time': '2020-04-21 22:56:21', 'ftime': '2020-04-21 22:56:21', 'context': '快件由【华南东莞枢纽】发往【广东阳江分拨】', 'location': ''}, {'time': '2020-04-21 22:24:38', 'ftime': '2020-04-21 22:24:38', 'context': '快件到达【华南东莞枢纽】', 'location': ''}, {'time': '2020-04-20 23:59:18', 'ftime': '2020-04-20 23:59:18', 'context': '快件由【江苏南京分拨】发往【华南东莞枢纽】', 'location': ''}, {'time': '2020-04-20 23:55:40', 'ftime': '2020-04-20 23:55:40', 'context': '快件到达【江苏南京分拨】', 'location': ''}, {'time': '2020-04-20 22:02:48', 'ftime': '2020-04-20 22:02:48', 'context': 'SN南京江宁汤山站已进行装袋扫描', 'location': ''}, {'time': '2020-04-20 14:52:26', 'ftime': '2020-04-20 14:52:26', 'context': '【SN南京江宁湖熟站】的描扫员【秦吴香】已收件', 'location': ''}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse in">
+    <pre>
+    
+pt1_8: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.014038
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse in">
+    <pre>
+    
+pt1_9: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：0.087617
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '0', 'condition': 'B00', 'com': 'zhongtong', 'status': '200', 'state': '1', 'data': [{'time': '2020-04-23 20:00:01', 'ftime': '2020-04-23 20:00:01', 'context': '【汕头金平】（0754-83915201） 的 小丸子（15362582932） 已揽收', 'location': ''}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse in">
+    <pre>
+    
+pt1_10: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.016692
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_11</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse in">
+    <pre>
+    
+pt1_11: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：0.085476
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '0', 'condition': 'H100', 'com': 'zhongtong', 'status': '200', 'state': '5', 'data': [{'time': '2017-01-15 08:55:00', 'ftime': '2017-01-15 08:55:00', 'context': '北京速递中关村区域分公司北太平庄营投部 安排投递，预计23:59:00前投递（投递员姓名：田东达;联系电话：18811672691）', 'location': ''}, {'time': '2017-01-14 10:21:00', 'ftime': '2017-01-14 10:21:00', 'context': '海关放行', 'location': ''}, {'time': '2017-01-13 03:48:00', 'ftime': '2017-01-13 03:48:00', 'context': '到达中国邮政速递物流股份有限公司北京市国货航航空邮件处处理中心（经转）', 'location': ''}, {'time': '2017-01-13 00:07:00', 'ftime': '2017-01-13 00:07:00', 'context': '离开上海市 发往北京市（经转）', 'location': ''}, {'time': '2017-01-12 23:02:00', 'ftime': '2017-01-12 23:02:00', 'context': '到达上海浦东航站处理中心（经转）', 'location': ''}, {'time': '2017-01-12 21:27:00', 'ftime': '2017-01-12 21:27:00', 'context': '离开广州市 发往上海市（经转）', 'location': ''}, {'time': '2017-01-11 15:33:00', 'ftime': '2017-01-11 15:33:00', 'context': '到达处理中心,来自中国香港 HK OPS', 'location': ''}, {'time': '2017-01-11 15:33:00', 'ftime': '2017-01-11 15:33:00', 'context': '收寄', 'location': ''}, {'time': '2017-01-11 15:33:00', 'ftime': '2017-01-11 15:33:00', 'context': '离开处理中心,发往中国 广州经济', 'location': ''}, {'time': '2017-01-10 23:00:00', 'ftime': '2017-01-10 23:00:00', 'context': '转单给EMS,转单号为:EL910408261HK', 'location': ''}, {'time': '2017-01-10 17:03:00', 'ftime': '2017-01-10 17:03:00', 'context': '货件到达HPH分拨中心', 'location': ''}, {'time': '2017-01-10 10:00:00', 'ftime': '2017-01-10 10:00:00', 'context': '货到处理中心，清关中', 'location': ''}, {'time': '2017-01-09 23:09:00', 'ftime': '2017-01-09 23:09:00', 'context': '航班已到港，提货中', 'location': ''}, {'time': '2017-01-06 22:30:00', 'ftime': '2017-01-06 22:30:00', 'context': '纽约分拨中心发往HPH分拨中心', 'location': ''}, {'time': '2017-01-06 22:19:00', 'ftime': '2017-01-06 22:19:00', 'context': '货件到达:纽约分拨中心', 'location': ''}, {'time': '2017-01-06 19:12:00', 'ftime': '2017-01-06 19:12:00', 'context': 'NYC取件入库', 'location': ''}, {'time': '2017-01-06 15:54:00', 'ftime': '2017-01-06 15:54:00', 'context': '起运地发件办理', 'location': ''}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_12</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
+    <div id='div_pt1_12' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
+    <div id='div_pt1_12' class="collapse in">
+    <pre>
+    
+pt1_12: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.018246
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_13' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_13</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_13' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_13'>通过</button>
+    <div id='div_pt1_13' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_13' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_13'>通过</button>
+    <div id='div_pt1_13' class="collapse in">
+    <pre>
+    
+pt1_13: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：0.086287
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '0', 'condition': '00', 'com': 'zhongtong', 'status': '200', 'state': '0', 'data': [{'time': '2020-04-27 03:02:09', 'ftime': '2020-04-27 03:02:09', 'context': '到达【秀屿区网点】', 'location': ''}, {'time': '2020-04-27 02:12:09', 'ftime': '2020-04-27 02:12:09', 'context': '离开【莆田分拣中心】发往【秀屿区网点】', 'location': ''}, {'time': '2020-04-26 11:12:09', 'ftime': '2020-04-26 11:12:09', 'context': '到达【莆田分拣中心】', 'location': ''}, {'time': '2020-04-25 17:33:58', 'ftime': '2020-04-25 17:33:58', 'context': '离开【宁德分拣中心】发往【莆田分拣中心】', 'location': ''}, {'time': '2020-04-25 17:03:58', 'ftime': '2020-04-25 17:03:58', 'context': '到达【宁德分拣中心】', 'location': ''}, {'time': '2020-04-25 15:03:58', 'ftime': '2020-04-25 15:03:58', 'context': '离开【福安市网点】发往【宁德分拣中心】', 'location': ''}, {'time': '2020-04-25 14:33:16', 'ftime': '2020-04-25 14:33:16', 'context': '已收件，到达【福安市网点】', 'location': ''}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_14' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_14</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_14' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_14'>通过</button>
+    <div id='div_pt1_14' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_14' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_14'>通过</button>
+    <div id='div_pt1_14' class="collapse in">
+    <pre>
+    
+pt1_14: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.016944
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_15' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_15</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_15' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_15'>通过</button>
+    <div id='div_pt1_15' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_15' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_15'>通过</button>
+    <div id='div_pt1_15' class="collapse in">
+    <pre>
+    
+pt1_15: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：0.205238
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '1', 'condition': 'F00', 'com': 'zhongtong', 'status': '200', 'state': '3', 'data': [{'time': '2020-04-18 12:15:14', 'ftime': '2020-04-18 12:15:14', 'context': '货物已完成配送，感谢您选择京东物流！', 'location': ''}, {'time': '2020-04-18 12:01:51', 'ftime': '2020-04-18 12:01:51', 'context': '您的订单在【京东便民站-五通桥区恒盛通讯】催提完成', 'location': ''}, {'time': '2020-04-17 12:03:31', 'ftime': '2020-04-17 12:03:31', 'context': '验货上架，货物已到京东便民站-五通桥区恒盛通讯', 'location': ''}, {'time': '2020-04-17 11:28:33', 'ftime': '2020-04-17 11:28:33', 'context': '配送员开始配送，请您准备收货，配送员，李波，手机号，13881372582', 'location': ''}, {'time': '2020-04-17 11:21:22', 'ftime': '2020-04-17 11:21:22', 'context': '货物已分配，等待配送', 'location': ''}, {'time': '2020-04-17 11:21:21', 'ftime': '2020-04-17 11:21:21', 'context': '货物已到达【乐山五通桥营业部】', 'location': ''}, {'time': '2020-04-16 20:40:21', 'ftime': '2020-04-16 20:40:21', 'context': '货物已完成分拣，离开【成都新都分拣中心】', 'location': ''}, {'time': '2020-04-16 10:13:18', 'ftime': '2020-04-16 10:13:18', 'context': '货物已交付京东物流', 'location': ''}, {'time': '2020-04-16 10:13:18', 'ftime': '2020-04-16 10:13:18', 'context': '货物已到达【成都新都分拣中心】', 'location': ''}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_16' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_16</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_16' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_16'>通过</button>
+    <div id='div_pt1_16' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_16' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_16'>通过</button>
+    <div id='div_pt1_16' class="collapse in">
+    <pre>
+    
+pt1_16: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.020396
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_17' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_17</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_17' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_17'>通过</button>
+    <div id='div_pt1_17' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_17' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_17'>通过</button>
+    <div id='div_pt1_17' class="collapse in">
+    <pre>
+    
+pt1_17: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：快递
+请求地址：http://www.kuaidi100.com/query
+请求参数：{
+'type' : 'zhongtong' , 'postid' :'73116039505988'
+ }
+请求方式：get
+响应时间：0.073883
+响应码：200
+响应报文：{'message': 'ok', 'nu': '73116039505988', 'ischeck': '1', 'com': 'zhongtong', 'status': '200', 'condition': 'F00', 'state': '3', 'data': [{'time': '2020-04-14 07:57:24', 'context': '查无结果', 'ftime': '2020-04-14 07:57:24'}]}
+断言关键字：ok
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_18' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_18</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -xnj
+    <button id='btn_pt1_18' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_18'>通过</button>
+    <div id='div_pt1_18' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -xnj -->
+    <button id='btn_pt1_18' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_18'>通过</button>
+    <div id='div_pt1_18' class="collapse in">
+    <pre>
+    
+pt1_18: ----------SetUp -----
+
+测试Excel名称：/Users/mac/Documents/work/GP/data_excel/接口测试用例_01.xlsx
+测试项名称：天气
+请求地址：http://wthrcdn.etouch.cn/weather_mini
+请求参数：{
+'city' : '西安' 
+}
+请求方式：get
+响应时间：0.021044
+响应码：200
+响应报文：{'data': {'yesterday': {'date': '26日星期日', 'high': '高温 30℃', 'fx': '西风', 'low': '低温 12℃', 'fl': '&lt;![CDATA[3-4级]]&gt;', 'type': '晴'}, 'city': '西安', 'forecast': [{'date': '27日星期一', 'high': '高温 26℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 13℃', 'fengxiang': '东北风', 'type': '晴'}, {'date': '28日星期二', 'high': '高温 30℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 15℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '29日星期三', 'high': '高温 31℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 20℃', 'fengxiang': '南风', 'type': '多云'}, {'date': '30日星期四', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 17℃', 'fengxiang': '西北风', 'type': '阴'}, {'date': '1日星期五', 'high': '高温 34℃', 'fengli': '&lt;![CDATA[&lt;3级]]&gt;', 'low': '低温 21℃', 'fengxiang': '南风', 'type': '阴'}], 'ganmao': '各项气象条件适宜，无明显降温过程，发生感冒机率较低。', 'wendu': '15'}, 'status': 1000, 'desc': 'OK'}
+断言关键字：1000
+-----------TearDown----
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>18</td>
+    <td>18</td>
+    <td>0</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+
+</body>
+</html>

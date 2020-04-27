@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="314d969f-c1e9-4024-8188-8006001b0880" name="Default" comment="updata">
+      <change afterPath="$PROJECT_DIR$/data_excel/接口测试用例_02.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/202004270757.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (1).xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data_excel/接口测试用例_  (1).xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/PathExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/PathExcel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/RExcetodicl.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/RExcetodicl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261632.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261633.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261635.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261636.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261637.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261638.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261640.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261643.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004261645.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_report/2020-04-26-16_45_03HTMLtemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/test_report/2020-04-26-16_47_33HTMLtemplate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/HTMLTestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/HTMLTestRunner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_  (1).xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_report/2020-04-26-17_09_19HTMLtemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/test_report/2020-04-27-07_57_14HTMLtemplate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,11 +98,18 @@
     <option name="width" value="1805" />
     <option name="height" value="836" />
   </component>
+  <component name="ProjectId" id="1b6GtlLwKdF7L4edvmxYEBQXpcH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="添加" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -368,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587890765218</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updata">
+      <created>1587892355501</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587892355501</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -425,30 +430,46 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="468" y="295" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890410785" />
-    <state x="307" y="23" key="CommitChangelistDialog2" timestamp="1587890764996">
+    <state x="307" y="23" key="CommitChangelistDialog2" timestamp="1587892355359">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890764996" />
-    <state width="1419" height="278" key="GridCell.Tab.0.bottom" timestamp="1587890851977">
+    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892355359" />
+    <state width="1419" height="278" key="GridCell.Tab.0.bottom" timestamp="1587892372047">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="278" key="GridCell.Tab.0.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890851977" />
-    <state width="1419" height="278" key="GridCell.Tab.0.center" timestamp="1587890851976">
+    <state width="1419" height="278" key="GridCell.Tab.0.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372047" />
+    <state width="1419" height="278" key="GridCell.Tab.0.center" timestamp="1587892372047">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="278" key="GridCell.Tab.0.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890851976" />
-    <state width="1419" height="278" key="GridCell.Tab.0.left" timestamp="1587890851976">
+    <state width="1419" height="278" key="GridCell.Tab.0.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372047" />
+    <state width="1419" height="278" key="GridCell.Tab.0.left" timestamp="1587892372046">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="278" key="GridCell.Tab.0.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890851976" />
-    <state width="1419" height="278" key="GridCell.Tab.0.right" timestamp="1587890851977">
+    <state width="1419" height="278" key="GridCell.Tab.0.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372046" />
+    <state width="1419" height="278" key="GridCell.Tab.0.right" timestamp="1587892372047">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="278" key="GridCell.Tab.0.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890851977" />
-    <state x="320" y="173" key="Vcs.Push.Dialog.v2" timestamp="1587890769108">
+    <state width="1419" height="278" key="GridCell.Tab.0.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372047" />
+    <state width="1419" height="263" key="GridCell.Tab.1.bottom" timestamp="1587892372039">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="320" y="173" key="Vcs.Push.Dialog.v2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890769108" />
+    <state width="1419" height="263" key="GridCell.Tab.1.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372039" />
+    <state width="1419" height="263" key="GridCell.Tab.1.center" timestamp="1587892372039">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state width="1419" height="263" key="GridCell.Tab.1.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372039" />
+    <state width="1419" height="263" key="GridCell.Tab.1.left" timestamp="1587892372038">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state width="1419" height="263" key="GridCell.Tab.1.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372038" />
+    <state width="1419" height="263" key="GridCell.Tab.1.right" timestamp="1587892372039">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state width="1419" height="263" key="GridCell.Tab.1.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372039" />
+    <state x="320" y="173" key="Vcs.Push.Dialog.v2" timestamp="1587892357518">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="320" y="173" key="Vcs.Push.Dialog.v2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892357518" />
     <state x="385" y="168" width="670" height="676" key="search.everywhere.popup" timestamp="1587892121750">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
