@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="314d969f-c1e9-4024-8188-8006001b0880" name="Default" comment="调试header">
-      <change afterPath="$PROJECT_DIR$/.gitignore_global" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore_global.swp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_report/2020-04-27-09_09_15HTMLtemplate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore_global" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore_global" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_excel/接口测试用例_02.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data_excel/接口测试用例_02.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/202004270855.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_report/2020-04-27-08_55_26HTMLtemplate.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587948769307</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="调试header">
+      <created>1587949560981</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587949560981</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -432,6 +437,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1修改说明" />
     <MESSAGE value="...." />
@@ -439,32 +446,33 @@
     <MESSAGE value="updata" />
     <MESSAGE value="调试header" />
     <option name="LAST_COMMIT_MESSAGE" value="调试header" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="468" y="295" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587890410785">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="468" y="295" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587890410785" />
-    <state x="307" y="23" key="CommitChangelistDialog2" timestamp="1587948769163">
+    <state x="307" y="23" key="CommitChangelistDialog2" timestamp="1587949836299">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587948769163" />
-    <state width="1419" height="212" key="GridCell.Tab.0.bottom" timestamp="1587949025984">
+    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949836299" />
+    <state width="1419" height="212" key="GridCell.Tab.0.bottom" timestamp="1587949808270">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="212" key="GridCell.Tab.0.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949025984" />
-    <state width="1419" height="212" key="GridCell.Tab.0.center" timestamp="1587949025983">
+    <state width="1419" height="212" key="GridCell.Tab.0.bottom/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949808270" />
+    <state width="1419" height="212" key="GridCell.Tab.0.center" timestamp="1587949808268">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="212" key="GridCell.Tab.0.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949025983" />
-    <state width="1419" height="212" key="GridCell.Tab.0.left" timestamp="1587949025982">
+    <state width="1419" height="212" key="GridCell.Tab.0.center/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949808268" />
+    <state width="1419" height="212" key="GridCell.Tab.0.left" timestamp="1587949808268">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="212" key="GridCell.Tab.0.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949025982" />
-    <state width="1419" height="212" key="GridCell.Tab.0.right" timestamp="1587949025983">
+    <state width="1419" height="212" key="GridCell.Tab.0.left/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949808268" />
+    <state width="1419" height="212" key="GridCell.Tab.0.right" timestamp="1587949808269">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1419" height="212" key="GridCell.Tab.0.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949025983" />
+    <state width="1419" height="212" key="GridCell.Tab.0.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949808269" />
     <state width="1419" height="263" key="GridCell.Tab.1.bottom" timestamp="1587892372039">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
@@ -481,10 +489,10 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state width="1419" height="263" key="GridCell.Tab.1.right/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587892372039" />
-    <state x="320" y="173" key="Vcs.Push.Dialog.v2" timestamp="1587948771177">
+    <state x="320" y="173" key="Vcs.Push.Dialog.v2" timestamp="1587949566222">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="320" y="173" key="Vcs.Push.Dialog.v2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587948771177" />
+    <state x="320" y="173" key="Vcs.Push.Dialog.v2/0.23.1440.821/-1920.-157.1920.1057@0.23.1440.821" timestamp="1587949566222" />
     <state x="385" y="168" width="670" height="676" key="search.everywhere.popup" timestamp="1587892121750">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
