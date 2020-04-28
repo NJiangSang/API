@@ -248,10 +248,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.RExcetodicl" />
-      <item itemvalue="Python.RWExcel" />
-      <item itemvalue="Python.RequestAPI" />
       <item itemvalue="Python.TestRunner" />
+      <item itemvalue="Python.RExcetodicl" />
+      <item itemvalue="Python.RequestAPI" />
+      <item itemvalue="Python.RWExcel" />
       <item itemvalue="Python tests.Unittests for test_case.test_yao.Test.test_1" />
     </list>
     <recent_temporary>
