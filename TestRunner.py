@@ -7,6 +7,8 @@ import unittest
 import time
 
 from tools.HTMLTestRunner import HTMLTestRunner
+version ='10.2.0'
+#版本控制，暂时设计放这里，后期优化读写文件
 
 if __name__ =='__main__':
     suite = unittest.TestLoader().discover("test_case")

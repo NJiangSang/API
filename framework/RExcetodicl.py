@@ -1,5 +1,6 @@
 from openpyxl import load_workbook
 from framework.logger import Logger
+from TestRunner import version
 logger = Logger(logger="RWExcel").getlog()
 class RExcetodicl():
 
